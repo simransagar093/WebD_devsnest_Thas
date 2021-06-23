@@ -1,0 +1,25 @@
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    display: grid;
+    grid-template-columns: repeat(20,0fr); /*repeat(20,1fr);*/
+    grid-template-rows: repeat(20,0fr);
+    box-shadow: 0 4px 8px black ;  
+}
+.box{
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    border: 1px solid black;
+    background-color: #e51d1d;
+}
+.box:hover{
+    background-color: #660202;
+}
