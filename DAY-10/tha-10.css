@@ -1,0 +1,49 @@
+body{
+	background-color: black;
+}
+.container{
+	background-color: #373535;
+	border-radius: 10px;
+	height: 540px;
+	width: 410px;
+	border: solid 2px;
+	margin: auto;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+	/*grid-template-columns: auto auto auto auto ;*/
+
+}
+.carde{
+	height: 120px;
+	width: 90px;
+	border-radius: 50%;
+	margin: 5px;
+	position: relative;
+	transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+
+
+}
+.carde:flip{
+	transform: rotateY(180deg);
+}
+ .carde:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+.front,.back{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border-radius: 5px;
+	background: transparent;
+
+
+}
+.front{
+    transform: rotateY(180deg);
+  }
