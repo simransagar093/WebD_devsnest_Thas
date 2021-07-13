@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+body{
+    background: rgb(248, 150, 166);
+    font-family: cursive;
+}
+.build{
+   position: absolute;
+   top: 18%;
+   left: 12%;
+   width: 380px;
+   height: 450px;
+   border: 2px solid black; 
+   background:rgb(131, 131, 233);
+ 
+
+}
+.build img{
+    width: 300px;
+    height: 320px;
+    margin: 0;
+}
+
+
+.build h2{
+    margin-left: 70px;
+    margin-top: 2px;
+    font-size: 40px;
+}
