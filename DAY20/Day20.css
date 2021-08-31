@@ -1,0 +1,23 @@
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+    background-color: rgb(221, 94, 115);
+  }
+  .App input{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(207, 170, 248);
+  }
+  .App button{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(250, 226, 119);
+    color: rgb(83, 3, 3);
+  }
+  .App .todo{
+    margin: 5px;
+    display: inline-block;
+  }
