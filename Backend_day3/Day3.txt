@@ -1,0 +1,46 @@
+127.0.0.1:6379> XADD mystream 1000 name
+(error) ERR unknown command 'XADD'
+127.0.0.1:6379>   XADD mystream 1000 name simran
+(error) ERR unknown command 'XADD'
+127.0.0.1:6379>
+127.0.0.1:6379> XADD mystream 10000 name simran
+(error) ERR unknown command 'XADD'
+127.0.0.1:6379>  subscribe devs
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "devs"
+3) (integer) 1
+127.0.0.1:6379> publish devsnest hello
+(integer) 0
+127.0.0.1:6379> publish devsnest hello guyss
+(error) ERR wrong number of arguments for 'publish' command
+127.0.0.1:6379> subscribe devsnest
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "devsnest"
+3) (integer) 1
+1) "message"
+2) "devsnest"
+3) "hello1234"
+1) "message"
+2) "devsnest"
+3) "myname"
+127.0.0.1:6379> publish dev hello
+(integer) 0
+127.0.0.1:6379> publish devsnest hello1234
+(integer) 1
+127.0.0.1:6379> publish devsnest myname
+(integer) 1
+127.0.0.1:6379> unsubscribe myname
+1) "unsubscribe"
+2) "myname"
+3) (integer) 0
+127.0.0.1:6379> punsubscribe d*
+1) "punsubscribe"
+2) "d*"
+3) (integer) 0
+127.0.0.1:6379> subscribe devs
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "devs"
+3) (integer) 1
